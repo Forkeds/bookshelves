@@ -1,0 +1,48 @@
+<a class="thumbnail" href="#" data-toggle="modal" [attr.data-target]="'#' + book + 'Modal'">
+    <img class="img-fluid" src="http://placehold.it/317x475/AD343E/ffffff" alt="">
+</a>
+<div class="row mb-2 py-2 book-properties mx-auto">
+  <div class="col text-left book-info">
+    <div class="recommended-by">Recommended By</div>
+    <div class="influencer">Tom Smith</div>
+  </div>
+</div>
+
+<div class="modal fade bd-example-modal-lg" [attr.id]="book + 'Modal'" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class=" ml-auto close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body px-md-5 pb-md-5">
+        <div class="container-fluid">
+
+          <div class="row pb-3">
+            <div class="col-lg-6 col-12">
+              <img class="img-fluid" src="http://placehold.it/317x475/AD343E/ffffff" alt="">
+            </div>
+            <div class="col-lg-6 col-12 py-3 mx-auto modal-details text-left">
+              <h3>The Circle of Trust</h3>
+              <h5>by Benjamin Prius</h5>
+              <div class="recommendation mt-4 mb-5 px-3 py-2">
+                <div class="recommended-by">Recommended By</div>
+                <div class="influencer">Tom Smith</div>
+                <hr />
+                <p>
+                  "Here is why this person recommends this book."
+                </p>
+                <p class="ml-3 font-italic">
+                  &mdash; <a href="#" target="_blank" class="src">source</a>
+                </p>
+              </div>
+              <a href="#" target="_blank" class="btn-purchase">Purchase Book</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

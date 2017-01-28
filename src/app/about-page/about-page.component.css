@@ -1,0 +1,16 @@
+.about {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+h2 {
+  color: #666;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+a {
+  color: rgba(58,190,181, 1);
+}

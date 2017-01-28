@@ -1,0 +1,68 @@
+.thumb {
+    margin-bottom: 30px;
+}
+
+.book-properties {
+  max-width: 317px;
+}
+
+.book-info {
+  line-height: 1.4;
+}
+
+.recommended-by {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+  text-transform: uppercase;
+  margin-top: 7px;
+}
+
+.influencer {
+  font-family: 'Montserrat', serif;
+  font-size: 1rem;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+
+.modal-content {
+  border: 0;
+  border-radius: 0;
+}
+
+.modal-details {
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  max-width: 317px;
+}
+
+.recommendation {
+  background-color: #efefef;
+}
+
+.recommendation .recommended-by {
+  font-size: 0.8rem;
+}
+
+.recommendation .influencer {
+  font-size: 1.1rem;
+}
+
+.recommendation a {
+  color: rgba(58,190,181, 1);
+}
+
+.btn-purchase {
+  background: rgba(58,190,181, 0.8);
+  padding: 15px;
+  color: white;
+  font-size: 1.4rem;
+  text-decoration: none;
+}
+
+.btn-purchase:hover {
+  background: rgba(58,190,181, 1);
+  text-decoration: none;
+}

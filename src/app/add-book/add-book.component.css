@@ -1,0 +1,47 @@
+.add {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1rem;
+  line-height: 2;
+  color: #555;
+}
+
+h2 {
+  color: #666;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-purchase {
+  background: rgba(58,190,181, 0.8);
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.btn-purchase:hover {
+  background: rgba(58,190,181, 1);
+  text-decoration: none;
+}
+
+input {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #999;
+    letter-spacing: 1px;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+    letter-spacing: 1px;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+    letter-spacing: 1px;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+    letter-spacing: 1px;
+}
