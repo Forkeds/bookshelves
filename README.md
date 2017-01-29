@@ -2,6 +2,9 @@
 
 This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.26.
 
+## Run this project
+After cloning this project, run `npm install` to install the required packages. Then add the file `src/app/config.ts` that contains your Contentful space ID and API key.
+
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 

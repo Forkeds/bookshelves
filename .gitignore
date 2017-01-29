@@ -7,6 +7,9 @@
 # dependencies
 /node_modules
 
+#Contentful API
+/src/app/config.ts
+
 # IDEs and editors
 /.idea
 .project

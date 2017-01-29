@@ -1,14 +1,14 @@
-<a class="thumbnail" href="#" data-toggle="modal" [attr.data-target]="'#' + book + 'Modal'">
-    <img class="img-fluid" src="http://placehold.it/317x475/AD343E/ffffff" alt="">
+<a class="thumbnail" href="#" data-toggle="modal" [attr.data-target]="'#' + book.fields.isbn + 'Modal'">
+    <img class="img-fluid" [src]="'https://images-na.ssl-images-amazon.com/images/P/' + book.fields.isbn + '.01._SCLZZZZZZZ_.jpg'" [alt]="book.fields.title">
 </a>
 <div class="row mb-2 py-2 book-properties mx-auto">
   <div class="col text-left book-info">
     <div class="recommended-by">Recommended By</div>
-    <div class="influencer">Tom Smith</div>
+    <div class="influencer">{{recommendations[0]?.fields.recommender}}</div>
   </div>
 </div>
 
-<div class="modal fade bd-example-modal-lg" [attr.id]="book + 'Modal'" tabindex="-1" role="dialog" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" [attr.id]="book.fields.isbn + 'Modal'" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
@@ -21,23 +21,23 @@
 
           <div class="row pb-3">
             <div class="col-lg-6 col-12">
-              <img class="img-fluid" src="http://placehold.it/317x475/AD343E/ffffff" alt="">
+              <img class="img-fluid" [src]="'https://images-na.ssl-images-amazon.com/images/P/' + book.fields.isbn + '.01._SCLZZZZZZZ_.jpg'" [alt]="book.fields.title">
             </div>
             <div class="col-lg-6 col-12 py-3 mx-auto modal-details text-left">
-              <h3>The Circle of Trust</h3>
-              <h5>by Benjamin Prius</h5>
-              <div class="recommendation mt-4 mb-5 px-3 py-2">
+              <h3>{{book.fields.title}}</h3>
+              <h5>{{book.fields.author}}</h5>
+              <div class="recommendation mt-4 mb-5 px-3 py-2" *ngFor="let recommendation of recommendations">
                 <div class="recommended-by">Recommended By</div>
-                <div class="influencer">Tom Smith</div>
+                <div class="influencer">{{recommendation?.fields.recommender}}</div>
                 <hr />
                 <p>
-                  "Here is why this person recommends this book."
+                  "{{recommendation?.fields.recommendation}}"
                 </p>
                 <p class="ml-3 font-italic">
-                  &mdash; <a href="#" target="_blank" class="src">source</a>
+                  &mdash; <a [href]="recommendation?.fields.source" target="_blank" class="src">{{recommendation?.fields.sourceName}}</a>
                 </p>
               </div>
-              <a href="#" target="_blank" class="btn-purchase">Purchase Book</a>
+              <a [href]="book.fields.purchaseLink" target="_blank" class="btn-purchase">Purchase Book</a>
             </div>
           </div>
 

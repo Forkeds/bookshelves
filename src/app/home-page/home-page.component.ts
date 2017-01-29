@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CatalogService } from '../services/catalog.service';
 
 @Component({
   selector: 'app-home-page',
@@ -7,11 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePageComponent implements OnInit {
 
-  books: number[] = [1, 2, 3];
+  books: Object[];
 
-  constructor() { }
+  constructor(private catalogService: CatalogService) { }
 
   ngOnInit() {
+    this.getLatestBooks(0, 10);
   }
 
+  getLatestBooks(startIndex: number, numEntries: number): void {
+    this.catalogService.getLatestBooks(startIndex, numEntries).subscribe(
+      data => this.books = data.items,
+      error => console.log(error));
+  }
 }

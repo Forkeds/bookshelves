@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { CatalogService } from '../services/catalog.service';
+import { Entry } from '../models/entry';
 
 @Component({
   selector: 'app-book-details',
@@ -7,11 +9,21 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class BookDetailsComponent implements OnInit {
 
-  @Input() book: number;
+  @Input() book: Entry;
+  recommendations: Object[] = [];
 
-  constructor() { }
+  constructor(private catalogService: CatalogService) { }
 
   ngOnInit() {
+    for (let rec of this.book.fields.recommendation) {
+      this.getRecommendation(rec.sys.id);
+    }
+  }
+
+  getRecommendation(id: string): void {
+    this.catalogService.getRecommendation(id).subscribe(
+      data => this.recommendations.push(data),
+      error => console.log(error));
   }
 
 }
