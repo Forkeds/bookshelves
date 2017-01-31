@@ -16,6 +16,9 @@ footer {
 .navbar {
 	font-family: 'Montserrat', sans-serif;
   font-size: 0.8rem;
+}
+
+.navbar-container {
   -webkit-box-shadow: 0 6px 4px -4px black;
   -moz-box-shadow: 0 6px 4px -4px black;
   box-shadow: 0 4px 4px -4px black;

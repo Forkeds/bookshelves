@@ -12,6 +12,7 @@ import { AboutPageComponent } from './about-page/about-page.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomePageComponent },
+  { path: 'category/:category', component: HomePageComponent },
   { path: 'about', component: AboutPageComponent },
   { path: 'add', component: AddBookComponent },
   { path: '**', component: HomePageComponent }

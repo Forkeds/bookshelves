@@ -21,6 +21,13 @@ export class CatalogService {
                     .catch(this.handleError);
   }
 
+  getLatestBooksByCategory(startIndex: number, numEntries: number, category: string): Observable<any> {
+    let params = "?content_type=book&skip=" + startIndex + "&limit=" + numEntries + "&order=sys.createdAt&fields.categories=" + category + "&include=0&";
+    return this.http.get(this.entriesUrl + params + this.accessToken)
+                    .map((response: Response) => response.json())
+                    .catch(this.handleError);
+  }
+
   getRecommendation(id: string): Observable<any> {
     let params = "/" + id + "?";
     return this.http.get(this.entriesUrl + params + this.accessToken)
